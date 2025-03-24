@@ -108,8 +108,10 @@ GCP bucket service account creation IAM->Service account
 
 9. FLASK Application
     python3 applicaiton.py
+   ![titanic-app](https://github.com/user-attachments/assets/90f2c578-465f-4b28-a160-293bc894cb62)
+
    
-10. ML MONITORING ---------------------------------------
+11. ML MONITORING ---------------------------------------
 Prometheus + Grefana
 
 DOCKER-COMPOSE.YAML
