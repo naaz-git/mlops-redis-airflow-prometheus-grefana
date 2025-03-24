@@ -42,6 +42,8 @@ Your Astro project contains the following files and folders:
 Deploy Project Locally
 ===========================
 
+
+
 1. Start Airflow on local machine by running 'astro dev start'.
 
 This command will spin up 4 Docker containers on your machine, each for a different Airflow component:
@@ -62,5 +64,30 @@ You should also be able to access your Postgres Database at 'localhost:5432/post
 Deploy Project to Astronomer
 =================================
 
-If you have an Astronomer account, pushing code to a Deployment on Astronomer is simple. For deploying instructions, refer to Astronomer documentation: https://www.astronomer.io/docs/astro/deploy-code/
+Steps :
+1. Astro Airflow: 
+Astro airflow CLI install - https://www.astronomer.io/docs/astro/cli/get-started-cli/
+astro dev init
+astro dev start
+
+3. pip install -e .
+4. Get GCP Key --------------------------------------
+GCP bucket service account creation IAM->Service account
+
+5. ETL Pipeline making
+   - Extract step-Read Data from GCP bukcet 
+   - Transform step- from CSV -> pandas dataframe ->SQL database
+   - Load into SQL database using python operator and psycopg2 connection ->[PostGreSQL]
+     
+     
+4. INSTALL REDIS --------------------------------------
+docker pull redis
+docker run -d --name redis-container -p 6379:6379 redis
+
+
+ML MONITORING ---------------------------------------
+Prometheus + Grefana
+
+DOCKER-COMPOSE.YAML
+docker-compose up -d
 
