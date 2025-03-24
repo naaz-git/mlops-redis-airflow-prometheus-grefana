@@ -3,6 +3,26 @@ Overview
 Apache Airflow is an open-source workflow orchestration tool used for scheduling and monitoring workflows, while Astronomer (often referred to as Astro) is a commercial platform built around Apache Airflow.
 Astro airflow is derived from Apache Air flow. This project was generated after 'astro dev init' using the Astronomer CLI. This readme describes the contents of the project, as well as how to run Apache Airflow on your local machine.
 
+Prometheus and Grafana: 
+These two cant be dierctly installed on Windows/Mac, we will use docker file and containarize them
+docker-compose.yml
+services:
+  prometheus:    
+    image: prom/prometheus:latest
+    container_name: prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    networks:
+      - monitoring
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    ports:
+      - "3000:3000"
+      
 Project Contents
 ================
 
