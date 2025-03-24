@@ -1,5 +1,7 @@
 Overview
 ========
+![docker-containers](https://github.com/user-attachments/assets/684ae89c-95a4-41e5-bee2-5eddbb185b99)
+
 Apache Airflow is an open-source workflow orchestration tool used for scheduling and monitoring workflows, while Astronomer (often referred to as Astro) is a commercial platform built around Apache Airflow.
 Astro airflow is derived from Apache Air flow. This project was generated after 'astro dev init' using the Astronomer CLI. This readme describes the contents of the project, as well as how to run Apache Airflow on your local machine.
 
@@ -85,14 +87,17 @@ GCP bucket service account creation IAM->Service account
    EP1- GCP bucket
    EP2-Postgres database
    http://localhost:8080/connection/list/
+   ![airflow dag](https://github.com/user-attachments/assets/f2b28fa7-0276-4ed0-8f4b-671b555ee67c)
+
    
    Dbeaver app[@port 5432] can be used to check database is correct or not
    Becuase SQL databsae is running on docker container not on local PC
-   
-7. Data Ingestion
+   ![dbeaver](https://github.com/user-attachments/assets/deabd1fb-ecba-4b73-b960-3efb17bcc717)
+
+8. Data Ingestion
    From SQL database -> local system in CSV format
    
-8. INSTALL REDIS --------------------------------------
+9. INSTALL REDIS --------------------------------------
    We cant run redis directly on Window, we need linux so we will run redis in docker container
    docker pull redis
    docker run -d --name redis-container -p 6379:6379 redis
@@ -106,13 +111,16 @@ GCP bucket service account creation IAM->Service account
     Distributed Systems: Redis supports replication and clustering, which makes it useful in building scalable and       
     distributed systems.
 
-9. FLASK Application
+10. FLASK Application
     python3 applicaiton.py
    ![titanic-app](https://github.com/user-attachments/assets/90f2c578-465f-4b28-a160-293bc894cb62)
 
    
 11. ML MONITORING ---------------------------------------
 Prometheus + Grefana
+![prometheus metrics](https://github.com/user-attachments/assets/e90bac32-fa5e-42aa-97e6-6c652d8abe1d)
+![grefana-dashboard](https://github.com/user-attachments/assets/0eb82ea5-79ab-469e-89ef-a5a58f29b647)
+
 
 DOCKER-COMPOSE.YAML
 docker-compose up -d
