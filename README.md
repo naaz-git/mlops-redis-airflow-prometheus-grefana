@@ -79,7 +79,16 @@ GCP bucket service account creation IAM->Service account
    - Extract step-Read Data from GCP bukcet 
    - Transform step- from CSV -> pandas dataframe ->SQL database
    - Load into SQL database using python operator and psycopg2 connection ->[PostGreSQL]
-     
+
+6. Endpoint connection building
+   Apache airflow dashboard
+   EP1- GCP bucket
+   EP2-Postgres database
+   http://localhost:8080/connection/list/
+   
+   Dbeaver app[@port 5432] can be used to check database is correct or not
+   Becuase SQL databsae is running on docker container not on local PC
+   
      
 4. INSTALL REDIS --------------------------------------
 docker pull redis
