@@ -89,13 +89,27 @@ GCP bucket service account creation IAM->Service account
    Dbeaver app[@port 5432] can be used to check database is correct or not
    Becuase SQL databsae is running on docker container not on local PC
    
-     
-4. INSTALL REDIS --------------------------------------
-docker pull redis
-docker run -d --name redis-container -p 6379:6379 redis
+7. Data Ingestion
+   From SQL database -> local system in CSV format
+   
+8. INSTALL REDIS --------------------------------------
+   We cant run redis directly on Window, we need linux so we will run redis in docker container
+   docker pull redis
+   docker run -d --name redis-container -p 6379:6379 redis
+   we will be doing dataprocessing i.e. Store and load in Json format from/to redis and make sure that postgres docker is    green tick means running in your docker desktop
 
+   Some Info:
+   Redis is an in-memory data structure store that is used as a database/cache. It stores data in a key-value format and     supports various data structures like strings, hashes, lists, sets, sorted sets, bitmaps, and more.
 
-ML MONITORING ---------------------------------------
+    Key Uses of Redis:
+    Caching: Redis is widely used to cache data to improve the speed of applications by storing frequently accessed data      in memory. Data Store: Though it is primarily an in-memory store, Redis can also persist data to disk for durability.
+    Distributed Systems: Redis supports replication and clustering, which makes it useful in building scalable and       
+    distributed systems.
+
+9. FLASK Application
+    python3 applicaiton.py
+   
+10. ML MONITORING ---------------------------------------
 Prometheus + Grefana
 
 DOCKER-COMPOSE.YAML
