@@ -69,6 +69,7 @@ Steps :
 Astro airflow CLI install - https://www.astronomer.io/docs/astro/cli/get-started-cli/
 astro dev init
 astro dev start
+  dockerfile for airflow will build and install apache google providers as well
 
 3. pip install -e .
 4. Get GCP Key --------------------------------------
