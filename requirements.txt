@@ -1,0 +1,11 @@
+pandas
+numpy
+setuptools
+#psycopg2-binary==2.9.10
+psycopg2
+scikit-learn
+imbalanced-learn
+redis
+flask
+alibi-detect
+prometheus_client
